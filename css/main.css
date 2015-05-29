@@ -1,0 +1,52 @@
+﻿/*
+
+
+    Edwin Patrick Cesar
+    edwinpjdcesar@gmail.com
+    edwincesar.com
+
+
+*/
+
+
+/* custom edits */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    overflow:hidden;
+}
+.center {
+    margin-right:auto;
+    margin-left:auto;
+}
+.ghost {
+    display:none;
+}
+.heading {
+    font-size:96px;
+}
+/* margins */
+.sm-pad-b {
+    padding-bottom:48px;
+}
+
+/* padding */
+
+/* bootstrap edits */
+.navbar-fixed-top {
+  position: relative;
+}
+.navbar-nav {
+    font-size:36px;
+}
+.navbar-nav > li > a {
+    padding-left:24px;
+    padding-right:24px;
+}
+.navbar-collapse {
+    text-align:center;
+}
+.page-header {
+    padding-top:100px;
+    padding-bottom:100px;
+}
