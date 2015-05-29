@@ -16,35 +16,33 @@ function colorChange() {
 }
 
 //  cool animations
-function doAnimation(element_ID, animation) {
-    var thing = $(element_ID);
-    $(document).ready(
-        function () {
-            thing.addClass('animated ' + animation);
-        },
-        function () {
-            window.setTimeout(function () {
-                thing.removeClass('animated ' + animation);
-            }, 2000);
-        });
-}
-/*
-function doAnimation(element_ID, animation) {
-    var thing = $(element_ID);
-    var wait = window.setTimeout(function () {
-        thing.addClass('animated ' + animation);
-    }, 2000, function () {
-        thing.removeClass('animated ' + animation);
-    });
-}
-*/
-$(document).ready(function () {
-    colorChange();
 
-    $(function () {
-        $('a[href=#about]').doAnimation('bounce');
+
+function doAnimation(element_ID, animation) {
+    $(element_ID).addClass(animation);
+    var wait = window.setTimeout(function () {
+    }, 1000, function () {
+        $(element_ID).removeClass(animation)
     });
+}
+
+$(document).ready(function () {
+    $('a[href=#about]').addClass('animated bounce', 3000);
+    $('a[href=#career]').addClass('animated bounce', 4000);
+    $('a[href=#projects]').addClass('animated bounce', 5000);
+    $('a[href=#contact]').addClass('animated bounce', 6000);
+
+    $('.link')
+        .on('mouseenter', function () {
+            $(this).animate({ 'font-size': '+=20' }, 'slow');
+        })
+        .on('mouseleave', function(){
+            $(this).animate({ 'font-size': '-=20' }, 'slow');
+        })
+        
     
+
+    colorChange();
     
     
 

@@ -33,6 +33,9 @@ body {
 /* padding */
 
 /* bootstrap edits */
+.animated {
+    visibility:visible !important;
+}
 .navbar-fixed-top {
   position: relative;
 }
@@ -42,11 +45,12 @@ body {
 .navbar-nav > li > a {
     padding-left:24px;
     padding-right:24px;
+    visibility:hidden;
 }
 .navbar-collapse {
     text-align:center;
 }
 .page-header {
     padding-top:100px;
-    padding-bottom:100px;
+    padding-bottom:450px;
 }
