@@ -21,12 +21,14 @@ function colorChange() {
 function doAnimation(element_ID, animation) {
     $(element_ID).addClass(animation);
     var wait = window.setTimeout(function () {
-    }, 1000, function () {
         $(element_ID).removeClass(animation)
-    });
+    }, 1300
+    );
 }
 
 $(document).ready(function () {
+
+    //  main
     $('a[href=#about]').addClass('animated bounce', 3000);
     $('a[href=#career]').addClass('animated bounce', 4000);
     $('a[href=#projects]').addClass('animated bounce', 5000);
@@ -34,17 +36,15 @@ $(document).ready(function () {
 
     $('.link')
         .on('mouseenter', function () {
-            $(this).animate({ 'font-size': '+=20' }, 'slow');
+            $(this).animate({ margin: -20, 'font-size': '+=20' }, 'fast');
         })
         .on('mouseleave', function(){
-            $(this).animate({ 'font-size': '-=20' }, 'slow');
+            $(this).animate({ margin: 0, 'font-size': '-=20' }, 'fast');
         })
-        
-    
 
     colorChange();
-    
-    
+
+    //  contact
 
     
 });

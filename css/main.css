@@ -25,6 +25,25 @@ body {
 .heading {
     font-size:96px;
 }
+.icon {
+    font-size:120px;
+}
+.icon .fa {
+    margin-left:30px;
+    margin-right:30px;
+}
+.link {
+    position:absolute;
+}
+.form {
+    margin-top:100px;
+}
+.well-water {
+    background-color:black;
+}
+.well-water li {
+    display: inline;
+}
 /* margins */
 .sm-pad-b {
     padding-bottom:48px;
