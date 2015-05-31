@@ -19,6 +19,9 @@ body {
     margin-right:auto;
     margin-left:auto;
 }
+.txt-c {
+    text-align:center;
+}
 .ghost {
     display:none;
 }
@@ -26,34 +29,48 @@ body {
     font-size:96px;
 }
 .icon {
-    font-size:120px;
-}
-.icon .fa {
-    margin-left:30px;
-    margin-right:30px;
+    font-size:60px;
 }
 .link {
     position:absolute;
 }
 .form {
-    margin-top:100px;
+    margin-top:60px;
 }
-.well-water {
-    background-color:black;
+.mock {
+    border:none;
 }
-.well-water li {
-    display: inline;
+.split-1, split-2 {
+    visibility:hidden;
 }
 /* margins */
 .sm-pad-b {
     padding-bottom:48px;
 }
-
+.xs-pad-t {
+    padding-top:24px;
+}
+.sm-pad-t {
+    padding-top:48px;
+}
 /* padding */
 
 /* bootstrap edits */
 .animated {
     visibility:visible !important;
+}
+textarea {
+    resize:none;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.btn {
+    margin-left:5px;
+    margin-right:5px;
+    width:45%;
 }
 .navbar-fixed-top {
   position: relative;

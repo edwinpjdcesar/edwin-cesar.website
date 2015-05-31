@@ -42,11 +42,18 @@ $(document).ready(function () {
             $(this).animate({ margin: 0, 'font-size': '-=20' }, 'fast');
         })
 
-    colorChange();
+    $('a[href=#contact]').click(function () {
+        var url = 'contact.html';
+        document.location.href = url;
+    })
 
     //  contact
-
+    $('.split-1').addClass('animated rotateInUpLeft', 1500);
+    $('.split-2').addClass('animated rotateInDownRight', 1500);
     
+
+    colorChange();
+
 });
 
 
