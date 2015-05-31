@@ -11,17 +11,15 @@
 //  pretty colors
 function colorChange() {
     var randomColor = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-    $('.heading').animate({ color: randomColor }, 2500);
+    $('.main-header').animate({ color: randomColor }, 2500);
     colorChange();
 }
 
 //  cool animations
-
-
-function doAnimation(element_ID, animation) {
-    $(element_ID).addClass(animation);
+function animate(element_ID, animation) {
+    $(element_ID).addClass('animated' + animation);
     var wait = window.setTimeout(function () {
-        $(element_ID).removeClass(animation)
+        $(element_ID).removeClass('animated' + animation)
     }, 1300
     );
 }
@@ -32,6 +30,7 @@ $(document).ready(function () {
     var projects = $('a[href=#projects]');
     var contact = $('a[href=#contact]');
 
+    //  introduction
     $('.greeting').addClass('ghost', function () {
         $(this).fadeIn(3000, function () {
             $(about).addClass('animated bounce', 1000),
@@ -49,38 +48,59 @@ $(document).ready(function () {
         });
     });
         
-
-    //  main
-    
-        
-    
-    
-
     $('contact').click(function () {
         var url = 'contact.html';
         document.location.href = url;
     })
 
-    $(function () {
-        $('a[href=#bio]').click(function () {
-            animate(la, 'fadeOutDown');
-            follow(ha, 'hinge');
-        })
-        $('a[href=#pics]').click(function () {
-            animate(la, 'fadeOutLeft');
-            follow(ha, 'bounceOutLeft');
-        })
-        $('contact').click(function () {
-            animate(la, 'fadeOutRight');
-            follow(ha, 'rollOut');
-        })
-    });
-
     //  contact
     $('.split-1').addClass('animated rotateInUpLeft', 1500);
     $('.split-2').addClass('animated rotateInDownRight', 1500);
+
+    //$(function () {
+    //    $('.ex').on('hover', function () {
+    //        animate('.ex', 'pulse');
+    //        return false;
+    //    });
+    //});
+
+    $('#contactForm').validate({
+        rules: {
+            first: {
+                minlength: 2,
+                maxlength: 30,
+                required: true
+            },
+            last: {
+                minlength: 2,
+                maxlength: 30,
+                required: true
+            },
+            business: {
+                minlength: 2,
+                maxlength: 30,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                minlength: 25,
+                required: true
+            }
+        },
+        highlight: function (element) {
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+        },
+        success: function (element) {
+            $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+        }
+    });
     
 
+
+    //  all
     colorChange();
 
 });

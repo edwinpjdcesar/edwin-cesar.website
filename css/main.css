@@ -28,8 +28,14 @@ body {
 .heading {
     font-size:96px;
 }
-.icon {
+.minor-heading {
     font-size:60px;
+}
+.petite-heading {
+    font-size:48px;
+}
+.icon {
+    font-size:96px;
 }
 .link {
     position:absolute;
@@ -44,6 +50,11 @@ body {
     visibility:hidden;
 }
 /* margins */
+.xs-marg-t {
+    margin-top:24px;
+}
+
+/* padding */
 .sm-pad-b {
     padding-bottom:48px;
 }
@@ -53,11 +64,17 @@ body {
 .sm-pad-t {
     padding-top:48px;
 }
-/* padding */
 
 /* bootstrap edits */
 .animated {
     visibility:visible !important;
+}
+.valid {
+    margin-bottom:-12px;
+}
+.error {
+    color:red;
+    margin:0;
 }
 textarea {
     resize:none;
@@ -68,9 +85,7 @@ textarea {
     box-shadow: none;
 }
 .btn {
-    margin-left:5px;
-    margin-right:5px;
-    width:45%;
+    width:20%;
 }
 .navbar-fixed-top {
   position: relative;
