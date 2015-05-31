@@ -27,25 +27,54 @@ function doAnimation(element_ID, animation) {
 }
 
 $(document).ready(function () {
+    var about = $('a[href=#about]');
+    var career = $('a[href=#career]');
+    var projects = $('a[href=#projects]');
+    var contact = $('a[href=#contact]');
+
+    $('.greeting').addClass('ghost', function () {
+        $(this).fadeIn(3000, function () {
+            $(about).addClass('animated bounce', 1000),
+            $(career).addClass('animated bounce', 2000),
+            $(projects).addClass('animated bounce', 3000),
+            $(contact).addClass('animated bounce', 4000, function () {
+                $('.link')
+                    .on('mouseenter', function () {
+                        $(this).animate({ margin: -20, 'font-size': '+=20' }, 'fast');
+                    })
+                    .on('mouseleave', function () {
+                        $(this).animate({ margin: 0, 'font-size': '-=20' }, 'fast');
+                    })
+            })
+        });
+    });
+        
 
     //  main
-    $('a[href=#about]').addClass('animated bounce', 3000);
-    $('a[href=#career]').addClass('animated bounce', 4000);
-    $('a[href=#projects]').addClass('animated bounce', 5000);
-    $('a[href=#contact]').addClass('animated bounce', 6000);
+    
+        
+    
+    
 
-    $('.link')
-        .on('mouseenter', function () {
-            $(this).animate({ margin: -20, 'font-size': '+=20' }, 'fast');
-        })
-        .on('mouseleave', function(){
-            $(this).animate({ margin: 0, 'font-size': '-=20' }, 'fast');
-        })
-
-    $('a[href=#contact]').click(function () {
+    $('contact').click(function () {
         var url = 'contact.html';
         document.location.href = url;
     })
+
+    $(function () {
+        $('a[href=#bio]').click(function () {
+            animate(la, 'fadeOutDown');
+            follow(ha, 'hinge');
+        })
+        $('a[href=#pics]').click(function () {
+            animate(la, 'fadeOutLeft');
+            follow(ha, 'bounceOutLeft');
+        })
+        $('contact').click(function () {
+            animate(la, 'fadeOutRight');
+            follow(ha, 'rollOut');
+        })
+    });
 
     //  contact
     $('.split-1').addClass('animated rotateInUpLeft', 1500);
