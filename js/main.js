@@ -8,17 +8,8 @@
 
 */
 
-//  cool animations
-function animate(element_ID, animation) {
-    $(element_ID).addClass('animated ' + animation);
-    var wait = window.setTimeout(function () {
-        $(element_ID).removeClass('animated ' + animation)
-    }, 1300
-    );
-}
-
 $(document).ready(function () {
-    
+    //  page links
     var about = $('a[href=#about]');
     var career = $('a[href=#career]');
     var projects = $('a[href=#projects]');
@@ -30,7 +21,6 @@ $(document).ready(function () {
         var languages = ['Hello World', 'Bonjour Le Monde', 'Hola Mundo', 'Hallo Welt', 'привет мир', 'こんにちは世界', '你好世界', 'Alo Mondyal'],
         theLanguage = languages[Math.floor(Math.random() * languages.length)];
         $('.main-header').text(theLanguage);
-
         if (theLanguage != 'Hello World') { $('.translation').text('(Hello World)'); }
         else { $('.translation').hide(); }
     }
@@ -51,28 +41,25 @@ $(document).ready(function () {
         );
     }
 
-    $('.greeting').addClass('ghost', function () {
-        $(this).fadeIn(3000, function () {
-            $(about).addClass('animated', 1000, function () {
-                bounceIt(this);
+    $('.greeting').hide(0).delay(500).fadeIn(3000, function () {
+        $(about).addClass('animated', 1000, function () {
+            bounceIt(this);
+        })
+        $(career).addClass('animated', 2000, function () {
+            bounceIt(this);
+        })
+        $(projects).addClass('animated', 3000, function () {
+            bounceIt(this);
+        })
+        $(contact).addClass('animated', 4000, function () {
+            bounceIt(this);
+            $('.link').hover(function () {
+                $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
+            }, function () {
+                $(this).stop().animate({ margin: 0, 'font-size': '36' }, 'fast');
             })
-            $(career).addClass('animated', 2000, function () {
-                bounceIt(this);
-            })
-            $(projects).addClass('animated', 3000, function () {
-                bounceIt(this);
-            })
-            $(contact).addClass('animated', 4000, function () {
-                bounceIt(this);
-
-                $('.link').hover(function () {
-                    $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
-                }, function () {
-                    $(this).stop().animate({ margin: 0, 'font-size': '36' }, 'fast');
-                })
-            })
-        });
-    });
+        })
+    })
         
     $(contact).click(function () {
         var url = 'contact.html';
@@ -81,7 +68,6 @@ $(document).ready(function () {
 
     translate();
     colorChange();
-
 });
 
 

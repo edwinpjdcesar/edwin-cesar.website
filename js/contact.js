@@ -8,21 +8,22 @@
 
 */
 
-//  cool animations
-function animate(element_ID, animation) {
-    $(element_ID).addClass('animated' + animation);
-    var wait = window.setTimeout(function () {
-        $(element_ID).removeClass('animated' + animation)
-    }, 1300
-    );
-}
-
 $(document).ready(function () {
+    //  cool animations
+    function doAnimation(element_ID, animation) {
+        $(element_ID).addClass(animation);
+        var wait = window.setTimeout(function () {
+            $(element_ID).removeClass(animation)
+        }, 1300
+        );
+    }
 
-    //  transition
-    $('.split-1').addClass('animated rotateInUpLeft', 1500);
-    $('.split-2').addClass('animated rotateInDownRight', 1500);
-
+    $('.half1').addClass('animated', function () {
+        doAnimation(this, 'rotateInUpLeft');
+    });
+    $('.half2').addClass('animated', function () {
+        doAnimation(this, 'rotateInDownRight');
+    });
     //$(function () {
     //    $('.ex').on('hover', function () {
     //        animate('.ex', 'pulse');
@@ -57,6 +58,8 @@ $(document).ready(function () {
                 required: true
             }
         },
+        errorElement: 'div',
+        errorLabelContainer: '.notify',
         highlight: function (element) {
             $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
         },

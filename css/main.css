@@ -23,7 +23,7 @@ body {
     text-align:center;
 }
 .ghost {
-    display:none;
+    visibility:hidden;
 }
 .heading {
     font-size:96px;
@@ -48,9 +48,6 @@ body {
 }
 .mock {
     border:none;
-}
-.split-1, split-2 {
-    visibility:hidden;
 }
 /* margins */
 .xs-marg-t {
