@@ -40,6 +40,9 @@ body {
 .link {
     position:absolute;
 }
+.translation {
+    font-size:12px;
+}
 .form {
     margin-top:60px;
 }
@@ -55,6 +58,9 @@ body {
 }
 
 /* padding */
+.xs-pad-b {
+    padding-bottom:24px;
+}
 .sm-pad-b {
     padding-bottom:48px;
 }
