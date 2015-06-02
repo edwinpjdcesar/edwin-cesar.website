@@ -18,11 +18,11 @@ body {
 .center {
     margin-right:auto;
     margin-left:auto;
-}
+}  
 .txt-c {
     text-align:center;
 }
-.ghost {
+.ghost, .back {
     visibility:hidden;
 }
 .heading {

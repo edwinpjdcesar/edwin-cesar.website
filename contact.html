@@ -37,8 +37,8 @@
 <body>
     <!-- Begin Content -->
     <div class="container">
-        <div class="text-center sm-pad-b">
-            <h2 class="contact-header petite-heading"> Need to get a hold of me? </h2>
+        <div class="contact-header ghost text-center sm-pad-b">
+            <h2 class="petite-heading"> Need to get a hold of me? </h2>
             <div class="sub-heading"> Take a seat and fill out this quick form. </div>
         </div>
         <!-- Begin Form -->
@@ -89,8 +89,8 @@
                             </div>
                         </div>
                         <div class="text-center form-actions">
-                            <button type="submit" disabled="disabled" class="btn btn-primary btn-lg" id="send">Send</button>
-                            <button type="reset" disabled="disabled" class="btn btn-primary btn-lg" id="clear">Clear</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                            <button type="reset" class="btn btn-primary btn-lg">Clear</button>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,12 @@
         </form>
         <!-- End Form -->
         <div class="row xs-marg-t">
-            <div class="notify"></div>
+            <div class="col-md-9">
+                <div class="notify"></div>
+            </div>
+            <div class="col-md-push-1 col-md-3">
+                <button type="button" class="back btn btn-default">Back</button>
+            </div>
         </div>
         <!--<div class="row xs-marg-t">
             <div class="icon txt-c xs-pad-t">
@@ -113,4 +118,5 @@
     </div>
     <!-- End Content -->
 </body>
+
 </html>
