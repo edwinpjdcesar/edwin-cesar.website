@@ -22,7 +22,10 @@ body {
 .txt-c {
     text-align:center;
 }
-.ghost, .back {
+.txt-l {
+    text-align:left;
+}
+.ghost, .back, .right, .left {
     visibility:hidden;
 }
 .heading {
@@ -107,4 +110,7 @@ textarea {
 .page-header {
     padding-top:100px;
     padding-bottom:450px;
+}
+.panel-title > a:hover, a:focus {
+    text-decoration:none;
 }

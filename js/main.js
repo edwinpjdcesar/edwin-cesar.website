@@ -44,26 +44,37 @@ $(document).ready(function () {
     $('.greeting').hide(0).delay(500).fadeIn(3000, function () {
         $(about).addClass('animated', 1000, function () {
             bounceIt(this);
-        })
-        $(career).addClass('animated', 2000, function () {
-            bounceIt(this);
-        })
-        $(projects).addClass('animated', 3000, function () {
-            bounceIt(this);
-        })
-        $(contact).addClass('animated', 4000, function () {
-            bounceIt(this);
-            $('.link').hover(function () {
-                $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
-            }, function () {
-                $(this).stop().animate({ margin: 0, 'font-size': '36' }, 'fast');
+            $(career).addClass('animated', 1000, function () {
+                bounceIt(this);
+                $(projects).addClass('animated', 1000, function () {
+                    bounceIt(this);
+                    $(contact).addClass('animated', 1000, function () {
+                        bounceIt(this);
+                        $('.link').hover(function () {
+                            $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
+                        }, function () {
+                            $(this).stop().animate({ margin: 0, 'font-size': '36' }, 'fast');
+                        })
+                        $(contact).click(function () {
+                            var url = 'contact.html';
+                            document.location.href = url;
+                        })
+                        $(career).click(function () {
+                            var url = 'career.html';
+                            document.location.href = url;
+                        })
+                        $(about).click(function () {
+                            var url = 'about.html';
+                            document.location.href = url;
+                        })
+                        $(projects).click(function () {
+                            var url = 'projects.html';
+                            document.location.href = url;
+                        })
+                    })
+                })
             })
         })
-    })
-        
-    $(contact).click(function () {
-        var url = 'contact.html';
-        document.location.href = url;
     })
 
     translate();
