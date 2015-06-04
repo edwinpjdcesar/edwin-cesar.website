@@ -37,8 +37,17 @@ body {
 .petite-heading {
     font-size:48px;
 }
+.list-heading {
+    font-size:24px;
+}
+.thick {
+    font-weight:bold;
+}
 .icon {
     font-size:96px;
+}
+.list {
+    list-style-type:none;
 }
 .link {
     position:absolute;
@@ -51,6 +60,13 @@ body {
 }
 .mock {
     border:none;
+}
+.list-unstyled > li {
+    padding-bottom:2px;
+}
+.chunky {
+    max-height:280px;
+    overflow-y:scroll;
 }
 /* margins */
 .xs-marg-t {

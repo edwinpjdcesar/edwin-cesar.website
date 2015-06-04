@@ -36,11 +36,26 @@ $(document).ready(function () {
                 $('.panel-title > a').hover(function () {
                     $(this).stop().animate({ 'color': '#6495ED', 'font-weight': '900' }, 'fast');
                 }, function () {
-                    $(this).stop().animate({ 'color':'black','font-weight': '100' }, 'fast');
+                    $(this).stop().animate({ 'color':'black','font-weight': '400' }, 'fast');
                 })
-                $('.collapse').on('shown.bs.collapse', function () {
-                    moveText('.panel-title');                
-                });
+                $('#c2').on('show.bs.collapse', function () {
+                    $('#s1').animate({ width: '100%' }, 10);
+                    $('#s2').animate({ width: '80%' }, 10);
+                    $('#s3').animate({ width: '100%' }, 10);
+                    $('#s4').animate({ width: '100%' }, 10);
+                    $('#s5').animate({ width: '100%' }, 10);
+                    $('#s6').animate({ width: '60%' }, 10);
+                    $('#s7').animate({ width: '45%' }, 10);
+                })
+                $('#c2').on('hide.bs.collapse', function () {
+                    $('#s1').animate({ width: '0%' });
+                    $('#s2').animate({ width: '0%' });
+                    $('#s3').animate({ width: '0%' });
+                    $('#s4').animate({ width: '0%' });
+                    $('#s5').animate({ width: '0%' });
+                    $('#s6').animate({ width: '0%' });
+                    $('#s7').animate({ width: '0%' });
+                })
             })
         })
     })
