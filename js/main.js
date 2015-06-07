@@ -33,23 +33,23 @@ $(document).ready(function () {
     }
 
     //  cool animations
-    function bounceIt(element_ID) {
-        $(element_ID).addClass('bounce');
+    function bounceIt(element_ID, animation) {
+        $(element_ID).addClass(animation);
         var wait = window.setTimeout(function () {
-            $(element_ID).removeClass('bounce')
+            $(element_ID).removeClass(animation)
         }, 1300
         );
     }
 
     $('.greeting').hide(0).delay(500).fadeIn(3000, function () {
         $(about).addClass('animated', 1000, function () {
-            bounceIt(this);
+            bounceIt(this,'fadeInLeft');
             $(career).addClass('animated', 1000, function () {
-                bounceIt(this);
+                bounceIt(this,'fadeInUp');
                 $(projects).addClass('animated', 1000, function () {
-                    bounceIt(this);
+                    bounceIt(this,'fadeInDown');
                     $(contact).addClass('animated', 1000, function () {
-                        bounceIt(this);
+                        bounceIt(this,'fadeInRight');
                         $('.link').hover(function () {
                             $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
                         }, function () {

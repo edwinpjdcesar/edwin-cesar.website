@@ -18,22 +18,22 @@ $(document).ready(function () {
         );
     }
 
-    //  google maps
-   var map = new GMaps({
-        div: '#uwfoxMap',
-        width: '500px',
-        height: '500px',
-        lat: -12.043333,
-        lng: -77.028333,
-        zoom: 7,
-        zoomControl: true,
-        zoomControlOpt: {
-            style: 'SMALL',
-            position: 'TOP_LEFT'
-        },
-        panControl: false
-   });
-   google.maps.event.trigger(map, "resize");
+   // //  google maps
+   //var map = new GMaps({
+   //     div: '#uwfoxMap',
+   //     width: '500px',
+   //     height: '500px',
+   //     lat: -12.043333,
+   //     lng: -77.028333,
+   //     zoom: 7,
+   //     zoomControl: true,
+   //     zoomControlOpt: {
+   //         style: 'SMALL',
+   //         position: 'TOP_LEFT'
+   //     },
+   //     panControl: false
+   //});
+   //google.maps.event.trigger(map, "resize");
 
     $('.petite-heading').addClass('animated', function () {
         doAnimation(this, 'rollIn');
