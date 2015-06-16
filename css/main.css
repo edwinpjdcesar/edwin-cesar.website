@@ -40,6 +40,9 @@ body {
 .list-heading {
     font-size:24px;
 }
+.together {
+    display:table;
+}
 .thick {
     font-weight:bold;
 }
@@ -51,9 +54,6 @@ body {
 }
 .link {
     position:absolute;
-}
-.translation {
-    font-size:12px;
 }
 .form {
     margin-top:60px;
@@ -68,17 +68,14 @@ body {
     max-height:280px;
     overflow-y:scroll;
 }
-.tabler {
+.vertical {
+    display:table-cell;
     height:500px;
-    border-collapse: separate;
-    border-spacing: 50px 0;
+
+    width:350px;
+    background-color:green;
+    border-radius: 25px;
 }
-    .tabler tr td {
-        padding: 10px 0;
-        width:350px;
-        background-color:green;
-        border-radius: 25px;
-    }
 
 table tr td > a:hover, a:focus {
     text-decoration:none !important;
@@ -102,6 +99,23 @@ table tr td > a:hover, a:focus {
 .sm-pad-t {
     padding-top:48px;
 }
+
+/* specifics */
+.translate {
+    font-size:36px;
+    color:lightblue;
+    cursor:pointer;
+    max-width:40px;
+
+    text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+    .translate:hover {
+        color:orange;
+    }
 
 /* bootstrap edits */
 .animated {

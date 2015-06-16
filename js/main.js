@@ -21,8 +21,14 @@ $(document).ready(function () {
         var languages = ['Hello World', 'Bonjour Le Monde', 'Hola Mundo', 'Hallo Welt', 'привет мир', 'こんにちは世界', '你好世界', 'Alo Mondyal'],
         theLanguage = languages[Math.floor(Math.random() * languages.length)];
         $('.main-header').text(theLanguage);
-        if (theLanguage != 'Hello World') { $('.translation').text('(Hello World)'); }
-        else { $('.translation').hide(); }
+
+        //  translate
+        if (theLanguage != 'Hello World') {
+            $('.translate').click(200, function () {
+                $('.main-header').text('Hello World');
+            })
+        }
+        else { $('.translate').hide(); }
     }
 
     //  pretty colors
@@ -41,20 +47,15 @@ $(document).ready(function () {
         );
     }
 
-    $('.greeting').hide(0).delay(500).fadeIn(3000, function () {
-        $(about).addClass('animated', 1000, function () {
+    $('.greeting').hide(0).delay(500).fadeIn(500, function () {
+        $(about).addClass('animated', 200, function () {
             bounceIt(this,'fadeInLeft');
-            $(career).addClass('animated', 1000, function () {
+            $(career).addClass('animated', 200, function () {
                 bounceIt(this,'fadeInUp');
-                $(projects).addClass('animated', 1000, function () {
+                $(projects).addClass('animated', 200, function () {
                     bounceIt(this,'fadeInDown');
-                    $(contact).addClass('animated', 1000, function () {
-                        bounceIt(this,'fadeInRight');
-                        $('.link').hover(function () {
-                            $(this).stop().animate({ margin: -20, 'font-size': '60' }, 'fast');
-                        }, function () {
-                            $(this).stop().animate({ margin: 0, 'font-size': '36' }, 'fast');
-                        })
+                    $(contact).addClass('animated', 200, function () {
+                        bounceIt(this, 'fadeInRight');
                         $(contact).click(function () {
                             var url = 'contact.html';
                             document.location.href = url;

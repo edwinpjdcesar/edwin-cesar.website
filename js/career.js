@@ -42,6 +42,13 @@ $(document).ready(function () {
             $('.right, .left').addClass('animated', function () {
                 doAnimation('.right', 'slideInRight');
                 doAnimation('.left', 'slideInLeft');
+                $('.back').addClass('animated', 2000, function () {
+                    doAnimation(this, 'fadeIn');
+                    $(this).click(function () {
+                        var url = 'index.html';
+                        document.location.href = url;
+                    })
+                })
                 $('.panel-title > a').hover(function () {
                     $(this).stop().animate({ 'color': '#6495ED', 'font-weight': '900' }, 'fast');
                 }, function () {
