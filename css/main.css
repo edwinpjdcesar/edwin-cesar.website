@@ -68,6 +68,22 @@ body {
     max-height:280px;
     overflow-y:scroll;
 }
+.tabler {
+    height:500px;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
+    .tabler tr td {
+        padding: 10px 0;
+        width:350px;
+        background-color:green;
+        border-radius: 25px;
+    }
+
+table tr td > a:hover, a:focus {
+    text-decoration:none !important;
+}
+
 /* margins */
 .xs-marg-t {
     margin-top:24px;
