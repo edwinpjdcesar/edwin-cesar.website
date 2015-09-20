@@ -13,7 +13,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     position:relative;
-    overflow:hidden;
+    /*overflow:hidden;      too restrictive for mobile devices */
 }
 .center {
     margin-right:auto;
@@ -116,6 +116,15 @@ table tr td > a:hover, a:focus {
     .translate:hover {
         color:orange;
     }
+
+/* google maps */
+.map {
+    display:block;
+    height:300px;
+    width:100%;
+    background-color: #808080;
+    margin:15px 0;
+}
 
 /* bootstrap edits */
 .animated {
