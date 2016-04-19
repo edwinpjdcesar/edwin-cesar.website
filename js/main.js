@@ -62,6 +62,7 @@ $(document).ready(function () {
                             e.preventDefault(); 
                         });
                         
+                        /*
                         $('.link').hover(function() {
                             var t = $(this);
                             t.data('text', t.text());
@@ -71,10 +72,6 @@ $(document).ready(function () {
                             t.text(t.data('text'));
                         });
                         
-                        /*$(contact).click(function () {
-                            var url = 'contact.html';
-                            document.location.href = url;
-                        })
                         $(career).click(function () {
                             var url = 'career.html';
                             document.location.href = url;
@@ -87,6 +84,10 @@ $(document).ready(function () {
                             var url = 'projects.html';
                             document.location.href = url;
                         })*/
+                        $(contact).click(function () {
+                            var url = 'contact.html';
+                            document.location.href = url;
+                        })
                     })
                 })
             })
