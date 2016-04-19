@@ -10,12 +10,12 @@
 
 $(document).ready(function () {
     //  page links
-    /*
+    
     var about = $('a[href=#about]');
     var career = $('a[href=#career]');
     var projects = $('a[href=#projects]');
     var contact = $('a[href=#contact]');
-    */
+    
 
     //  random language
     function translate() {
