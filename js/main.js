@@ -46,7 +46,20 @@ $(document).ready(function () {
         }, 1300
         );
     }
-
+    
+    $('.link').click(function(e){
+       e.preventDefault(); 
+    });
+    
+    $('.link').hover(function() {
+        var t = $(this);
+        t.data('text', t.text());
+        t.text("Coming Soon!");
+    }, function() {
+        var t = $(this);
+        t.text(t.data('text'));
+    });
+    
     $('.greeting').hide(0).delay(500).fadeIn(500, function () {
         $(about).addClass('animated', 200, function () {
             bounceIt(this,'fadeInLeft');
@@ -56,7 +69,7 @@ $(document).ready(function () {
                     bounceIt(this,'fadeInDown');
                     $(contact).addClass('animated', 200, function () {
                         bounceIt(this, 'fadeInRight');
-                        $(contact).click(function () {
+                        /*$(contact).click(function () {
                             var url = 'contact.html';
                             document.location.href = url;
                         })
@@ -71,7 +84,7 @@ $(document).ready(function () {
                         $(projects).click(function () {
                             var url = 'projects.html';
                             document.location.href = url;
-                        })
+                        })*/
                     })
                 })
             })
