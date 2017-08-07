@@ -29,8 +29,8 @@ $(function() {
             url: 'https://cdn.rawgit.com/edwinpjdcesar/edwin-cesar.website/gh-pages/assets/languages.json',
             dataType: 'json',
             async: false,
-            success: function(langauges) {
-                var language = JSON.parse(languages[Math.floor(Math.random() * languages.length)]);
+            success: function(languages) {
+                var language = languages[Math.floor(Math.random() * languages.length)];
 
                 if(language.string.length < 1)
                     header.text('Hello World');
