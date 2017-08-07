@@ -1,73 +1,85 @@
 ﻿/*
-
-
     Edwin Patrick Cesar
     edwinpjdcesar@gmail.com
     edwincesar.com
-
-
 */
 
-
-/* custom edits */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    position:relative;
-    /*overflow:hidden;      too restrictive for mobile devices */
+html {
+    display: table;
+    margin: auto;
 }
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .center {
     margin-right:auto;
     margin-left:auto;
-}  
+}
+
 .txt-c {
     text-align:center;
 }
-.txt-l {
-    text-align:left;
-}
+    .txt-l {
+        text-align:left;
+    }
+
 .ghost, .back, .right, .left {
     visibility:hidden;
 }
+
 .heading {
     font-size:96px;
 }
-.minor-heading {
-    font-size:60px;
+    .minor-heading {
+        font-size:60px;
+    }
+    .petite-heading {
+        font-size:48px;
+    }
+    .list-heading {
+        font-size:24px;
+    }
+
+.greeting span {
+    font-size 12px;
+    font-style: italic;
 }
-.petite-heading {
-    font-size:48px;
-}
-.list-heading {
-    font-size:24px;
-}
-.together {
-    display:table;
-}
-.thick {
-    font-weight:bold;
-}
-.icon {
-    font-size:96px;
-}
-.list {
-    list-style-type:none;
-}
+
+.together { display:table; }
+
+.thick { font-weight:bold; }
+
+.icon { font-size:96px; }
+
+.list { list-style-type:none; }
+
 .link {
     position:absolute;
 }
-.form {
-    margin-top:60px;
-}
-.mock {
-    border:none;
-}
-.list-unstyled > li {
-    padding-bottom:2px;
-}
+    .link a:hover {
+        cursor: not-allowed;
+    }
+
+.form { margin-top:60px; }
+
+.mock { border:none; }
+
+.list-unstyled > li { padding-bottom:2px; }
+
 .chunky {
     max-height:400px;
     overflow-y:scroll;
 }
+
 .vertical {
     display:table-cell;
     height:500px;
@@ -77,9 +89,7 @@ body {
     border-radius: 25px;
 }
 
-table tr td > a:hover, a:focus {
-    text-decoration:none !important;
-}
+table tr td > a:hover, a:focus { text-decoration:none !important; }
 
 /* margins */
 .xs-marg-t {
@@ -90,15 +100,16 @@ table tr td > a:hover, a:focus {
 .xs-pad-b {
     padding-bottom:24px;
 }
-.sm-pad-b {
-    padding-bottom:48px;
-}
+    .sm-pad-b {
+        padding-bottom:36px;
+    }
+
 .xs-pad-t {
     padding-top:24px;
 }
-.sm-pad-t {
-    padding-top:48px;
-}
+    .sm-pad-t {
+        padding-top:48px;
+    }
 
 /* specifics */
 .translate {
@@ -164,8 +175,7 @@ textarea {
     text-align:center;
 }
 .page-header {
-    padding-top:100px;
-    padding-bottom:450px;
+    border-bottom: none !important;
 }
 .panel-title > a:hover, a:focus {
     text-decoration:none;
