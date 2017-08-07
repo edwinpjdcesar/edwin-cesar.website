@@ -26,7 +26,7 @@ $(function() {
     function sayHello() {
         $.ajax({
             type: 'GET',
-            url: '../assets/languages.json',
+            url: 'https://cdn.rawgit.com/edwinpjdcesar/edwin-cesar.website/gh-pages/assets/languages.json',
             dataType: 'json',
             async: false,
             success: function(langauges) {
