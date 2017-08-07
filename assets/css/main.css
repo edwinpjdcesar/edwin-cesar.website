@@ -4,21 +4,19 @@
     edwincesar.com
 */
 
-html {
-    display: table;
-    margin: auto;
-}
-
 html, body {
     height: 100vh;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif !important;
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-}
+    html {
+        display: table;
+        margin: auto;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif !important;
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+    }
 
 .center {
     margin-right:auto;
@@ -28,75 +26,46 @@ body {
 .txt-c {
     text-align:center;
 }
-    .txt-l {
-        text-align:left;
-    }
-
-.ghost, .back, .right, .left {
-    visibility:hidden;
-}
 
 .heading {
     font-size:96px;
 }
-    .minor-heading {
-        font-size:60px;
-    }
-    .petite-heading {
-        font-size:48px;
-    }
-    .list-heading {
-        font-size:24px;
-    }
 
-.greeting span {
-    font-size 12px;
+.headliner span {
+    font-size: 10px !important;
     font-style: italic;
 }
 
-.together { display:table; }
-
-.thick { font-weight:bold; }
-
-.icon { font-size:96px; }
-
-.list { list-style-type:none; }
-
-.link {
-    position:absolute;
+.links .fa {
+    font-size:14px;
+    margin: 2.5px;
+    color: black;
 }
-    .link a:hover {
-        cursor: not-allowed;
+    .links .fa:hover {
+        font-weight: bold;
+        cursor: pointer;
     }
 
-.form { margin-top:60px; }
-
-.mock { border:none; }
-
-.list-unstyled > li { padding-bottom:2px; }
-
-.chunky {
-    max-height:400px;
-    overflow-y:scroll;
+li a {
+    position:absolute;
 }
+    li a:hover {
+        cursor: not-allowed;
+    }
+    li a .fa {
+        margin-right: 8px;
+    }
 
-.vertical {
-    display:table-cell;
-    height:500px;
-
-    width:350px;
-    background-color:green;
-    border-radius: 25px;
-}
-
-table tr td > a:hover, a:focus { text-decoration:none !important; }
-
-/* margins */
+/*
+    Margin
+*/
 .xs-marg-t {
     margin-top:24px;
 }
 
-/* padding */
+/*
+    Padding
+*/
 .xs-pad-b {
     padding-bottom:24px;
 }
@@ -110,73 +79,38 @@ table tr td > a:hover, a:focus { text-decoration:none !important; }
     .sm-pad-t {
         padding-top:48px;
     }
-
-/* specifics */
-.translate {
-    font-size:36px;
-    color:lightblue;
-    cursor:pointer;
-    max-width:40px;
-
-    text-shadow:
-    -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000;
-}
-    .translate:hover {
-        color:orange;
+    .md-pad-t {
+        padding-top:60px;
     }
 
-/* google maps */
-.map {
-    display:block;
-    height:200px;
-    width:80%;
-    background-color: #808080;
-    border:1px solid;
-    margin:25px 0;
-}
-
-/* bootstrap edits */
+/*
+    Bootstrap edits (not including direct changes to CSS files)
+*/
 .animated {
     visibility:visible !important;
 }
-.valid {
-    margin-bottom:-12px;
-}
-.error {
-    color:red;
-    margin:0;
-}
-textarea {
-    resize:none;
-    outline: none;
 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-.btn {
-    width:20%;
-}
 .navbar-fixed-top {
-  position: relative;
+    position: relative;
 }
+
 .navbar-nav {
     font-size:36px;
 }
-.navbar-nav > li > a {
-    padding-left:24px;
-    padding-right:24px;
-    visibility:hidden;
-}
+    .navbar-nav > li > a {
+        padding-left:24px;
+        padding-right:24px;
+        visibility:hidden;
+    }
+
 .navbar-collapse {
     text-align:center;
 }
+
 .page-header {
     border-bottom: none !important;
 }
+
 .panel-title > a:hover, a:focus {
     text-decoration:none;
 }

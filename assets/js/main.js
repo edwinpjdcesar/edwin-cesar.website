@@ -32,10 +32,14 @@ $(function() {
             success: function(languages) {
                 var language = languages[Math.floor(Math.random() * languages.length)];
 
-                if(language.string.length < 1)
-                    header.text('Hello World');
-                else
+                if(language.string.length > 1) {
                     header.text(language.string);
+
+                    if(language.country != 'English')
+                        header.after('<span>"Hello World" in ' + language.country + '</span>');
+                } else {
+                    header.text('Hello World');
+                }
             }
         });
     }
@@ -49,7 +53,7 @@ $(function() {
         changeColor();
     }
 
-    $('.greeting').hide(0).delay(500).fadeIn(500, function() {
+    $('.headliner, .links').hide(0).delay(500).fadeIn(500, function() {
         about.runTransition('fadeInLeft', function() {
             career.runTransition('fadeInUp', function() {
                 projects.runTransition('fadeInDown', function() {
@@ -66,7 +70,6 @@ $(function() {
             });
         });
     });
-
     sayHello();
     changeColor();
 });
