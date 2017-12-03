@@ -20,7 +20,9 @@ $(function() {
         about = $('a[href="#about"]'),
         career = $('a[href="#career"]'),
         projects = $('a[href="#projects"]'),
-        contact = $('a[href="#contact"]');
+        contact = $('a[href="#contact"]'),
+        pressed = false,
+        miscLinks = $(".links");
 
     //  Select a random language for header text.
     function sayHello() {
@@ -35,7 +37,7 @@ $(function() {
                 if(language.string.length > 1) {
                     header.text(language.string);
 
-                    if(language.country != 'English')
+                    if(language.country != 'English' && language.string != 'Hello World')
                         header.after('<span>"Hello World" in ' + language.country + '</span>');
                 } else {
                     header.text('Hello World');
@@ -53,23 +55,47 @@ $(function() {
         changeColor();
     }
 
-    $('.headliner, .links').hide(0).delay(500).fadeIn(500, function() {
+    function showDialog(msg){
+        var dialog = $('.dialog-body'),
+            content = msg != "" && msg != null
+                ? "Sorry, but the <b>" + msg + "</b> portion of this website is currently under construction."
+                : "Sorry, but this website is currently under construction.";
+
+        dialog.html(content);
+        dialog.css({'top':0, 'opacity':1});
+
+        setTimeout(function(){
+            dialog.css({'top':'-10%', 'opacity':0});
+        }, 2000);
+    }
+
+    $('.headliner').hide(0).delay(500).fadeIn(500, function() {
         about.runTransition('fadeInLeft', function() {
             career.runTransition('fadeInUp', function() {
                 projects.runTransition('fadeInDown', function() {
                     contact.runTransition('fadeInRight', function() {
-                        // TODO: Uncomment when pages are set up.
-                        /*$('.link').click(function(e) {
-                            e.preventDefault();
-                        });
-                        contact.click(function() {
-                            document.location.href = 'contact.html';
-                        });*/
+                        miscLinks.animate({'opacity': 1}, 5000);
                     });
                 });
             });
         });
     });
+
+    //  TODO: Remove once official site is published.
+    $('a').click(function(e){
+        var a = $(this);
+
+        if(!a.data("link")) return;
+
+        e.preventDefault();
+        if(!pressed){
+            showDialog(a.data("link"));
+            pressed = true;
+        } else {
+            pressed = false;
+        }
+    });
+
     sayHello();
     changeColor();
 });
