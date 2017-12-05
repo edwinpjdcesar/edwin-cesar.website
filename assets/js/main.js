@@ -66,6 +66,7 @@ $(function() {
 
         setTimeout(function(){
             dialog.css({'top':'-10%', 'opacity':0});
+            pressed = false;
         }, 2000);
     }
 
@@ -74,7 +75,7 @@ $(function() {
             career.runTransition('fadeInUp', function() {
                 projects.runTransition('fadeInDown', function() {
                     contact.runTransition('fadeInRight', function() {
-                        miscLinks.animate({'opacity': 1}, 5000);
+                        miscLinks.animate({'opacity': 1}, 3000);
                     });
                 });
             });
